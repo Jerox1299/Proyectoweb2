@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "015432e4-5e8d-40e7-8cb3-ab254eb32af0",
+		"name": "API Compras - Concesionario",
+		"description": "Colección de APIs para gestionar las compras en el sistema del concesionario de automóviles.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29817728"
+	},
+	"item": [
+		{
+			"name": "Obtener todas las compras",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/compras",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"compras"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear una compra",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fecha\": \"2024-07-15\",\n    \"clienteID\": 1,\n    \"empleadoID\": 1,\n    \"precioTotal\": 40000,\n    \"detallesVenta\": [\n        {\n            \"productoID\": 1,\n            \"tipoProducto\": \"vehiculo\",\n            \"cantidad\": 1,\n            \"precioUnitario\": 20000,\n            \"precioTotal\": 20000\n        },\n        {\n            \"productoID\": 1,\n            \"tipoProducto\": \"insumo\",\n            \"cantidad\": 2,\n            \"precioUnitario\": 1000,\n            \"precioTotal\": 2000\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/compras",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"compras"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar una compra",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fecha\": \"2024-07-15\",\n    \"clienteID\": 1,\n    \"empleadoID\": 1,\n    \"precioTotal\": 45000,\n    \"detallesVenta\": [\n        {\n            \"productoID\": 1,\n            \"tipoProducto\": \"vehiculo\",\n            \"cantidad\": 2,\n            \"precioUnitario\": 20000,\n            \"precioTotal\": 40000\n        },\n        {\n            \"productoID\": 2,\n            \"tipoProducto\": \"insumo\",\n            \"cantidad\": 3,\n            \"precioUnitario\": 1000,\n            \"precioTotal\": 3000\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/compras/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"compras",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar una compra",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/compras/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"compras",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "e106b34e-b7d1-474b-8786-16d65d0b0059",
+		"name": "API Insumos - Concesionario",
+		"description": "Colección de APIs para gestionar los insumos en el sistema del concesionario de automóviles.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29817728"
+	},
+	"item": [
+		{
+			"name": "Obtener todos los insumos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/insumos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"insumos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear un insumo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\": \"Aceite de Motor\",\n    \"descripcion\": \"Aceite sintético para motor\",\n    \"precio\": 50.00,\n    \"almacenID\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/insumos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"insumos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar un insumo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\": \"Aceite de Motor\",\n    \"descripcion\": \"Aceite sintético para motor de alto rendimiento\",\n    \"precio\": 60.00,\n    \"almacenID\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/insumos/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"insumos",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar un insumo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/insumos/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"insumos",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
